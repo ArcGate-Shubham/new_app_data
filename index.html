@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo-movies-api</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link href="movie_details.html" />
+  </head>
+
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand">MoviesRock</a>
+        <form class="d-flex data_value" role="search" id="form">
+          <input
+            class="form-control me-2"
+            id="search"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-primary" id="submitbtn" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox"></div>
+
+      <a
+        class="carousel-control-prev"
+        href="#movieCarousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#movieCarousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <div>
+      <h3 id="trending_data">Trending</h3>
+    </div>
+
+    <main id="main">
+      <div class="movie">
+        <img src="" alt="Image" />
+
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+        <div class="overview">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero
+          magnam facilis, inventore eos voluptatum molestias. Eligendi amet,
+          pariatur suscipit esse, minus tempore doloremque molestias sapiente,
+          corrupti animi voluptas magnam.
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="" alt="Image" />
+
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+
+        <div class="overview">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero
+          magnam facilis, inventore eos voluptatum molestias. Eligendi amet,
+          pariatur suscipit esse, minus tempore doloremque molestias sapiente,
+          corrupti animi voluptas magnam.
+        </div>
+      </div>
+      <div class="movie">
+        <img src="" alt="Image" />
+
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+
+        <div class="overview">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero
+          magnam facilis, inventore eos voluptatum molestias. Eligendi amet,
+          pariatur suscipit esse, minus tempore doloremque molestias sapiente,
+          corrupti animi voluptas magnam.
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
