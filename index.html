@@ -16,18 +16,6 @@
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand">MoviesRock</a>
-        <form class="d-flex data_value" role="search" id="form">
-          <input
-            class="form-control me-2"
-            id="search"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-primary" id="submitbtn" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
 
@@ -56,8 +44,23 @@
       </a>
     </div>
 
+    <form class="d-flex data_value" role="search" id="form">
+      <input
+        class="form-control me-2"
+        id="search"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-primary" id="submitbtn" type="submit">
+        Search
+      </button>
+    </form>
+
     <div>
       <h3 id="trending_data">Trending</h3>
+      <h3 id="record_data" style="display: none">Record not found</h3>
+      <h3 id="search_data" style="display: none">Search Movies</h3>
     </div>
 
     <main id="main">

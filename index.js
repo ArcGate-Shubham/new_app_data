@@ -13,6 +13,7 @@ const movie = document.querySelector(".movie");
 let allMoviesData = [];
 let currentPage = 1;
 let totalPages = 1;
+let searchQuery = "";
 
 getMovies(API_URL);
 
@@ -103,6 +104,10 @@ function displayMoviesInCarousel(movies) {
       indicator.classList.add("active");
     }
     carouselIndicators.appendChild(indicator);
+    movieElement.addEventListener("click", () => {
+      // When a movie in the carousel is clicked, navigate to the "movie_details.html" page with the movie ID
+      window.location.href = `movie_details.html?id=${movie.id}`;
+    });
   });
 
   // Set the first movie as active
@@ -125,12 +130,21 @@ function createMovieElement(movie, index) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const searchTerm = search.value;
+  searchQuery = search.value.trim();
 
-  if (searchTerm) {
-    getMovies(searchURL + "&query=" + searchTerm);
+  if (searchQuery === "") {
+    // Display alert if the search term is empty or contains only spaces
+    document.getElementById("main").style.display = "none";
+    document.getElementById("trending_data").style.display = "none";
+    document.getElementById("record_data").style.display = "block";
+    document.getElementById("search_data").style.display = "none";
   } else {
-    getMovies(API_URL);
+    currentPage = 1;
+    getMovies(searchURL + "&query=" + searchQuery);
+    document.getElementById("main").style.display = "flex";
+    document.getElementById("trending_data").style.display = "none";
+    document.getElementById("record_data").style.display = "none";
+    document.getElementById("search_data").style.display = "block";
   }
 });
 
@@ -150,6 +164,13 @@ window.addEventListener("scroll", () => {
 
 function loadNextPage() {
   currentPage++;
-  const nextPageUrl = `${API_URL}&page=${currentPage}`;
+  let nextPageUrl;
+  if (searchQuery) {
+    // If searchQuery has a value, load the next page of search results
+    nextPageUrl = `${searchURL}&query=${searchQuery}&page=${currentPage}`;
+  } else {
+    // Otherwise, load the next page of the initial data
+    nextPageUrl = `${API_URL}&page=${currentPage}`;
+  }
   getMovies(nextPageUrl);
 }

@@ -48,6 +48,7 @@ ol li {
 .carousel-item img {
   margin-left: 660px;
   border: 2px solid wheat;
+  cursor: pointer;
 }
 
 .carousel-item {
@@ -63,7 +64,7 @@ body {
 #trending_data {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 130px;
+  margin-left: 120px;
   font-size: 40px;
   font-weight: unset;
   color: white;
@@ -84,6 +85,7 @@ body {
 
 .movie img {
   width: 100%;
+  cursor: pointer;
 }
 
 main {
@@ -240,4 +242,29 @@ main {
   margin-left: 485px;
   margin-top: -500px;
   color: darkgoldenrod;
+}
+
+#record_data {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 120px;
+  font-size: 40px;
+  font-weight: unset;
+  color: white;
+  font-style: unset;
+}
+
+#search_data {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 115px;
+  font-size: 40px;
+  font-weight: unset;
+  color: white;
+  font-style: unset;
+}
+
+#form {
+  margin-top: 30px;
+  margin-left: 120px;
 }
